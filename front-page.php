@@ -29,6 +29,40 @@ get_header();
 			endif;
             ?>
 
+            <section class="home-left">
+				<?php
+				if ( function_exists( 'get_field' ) ) {
+					if ( get_field( 'left_section_heading' ) ) {
+						echo '<h2>';
+						the_field( 'left_section_heading' );
+						echo '</h2>';
+					}
+					if ( get_field( 'left_section_content' ) ) {
+						echo '<p>';
+						the_field( 'left_section_content' );
+						echo '</p>';
+					}
+				}
+				?>
+			</section>
+
+			<section class="home-right">
+				<?php
+				if ( function_exists( 'get_field' ) ) {
+					if ( get_field( 'right_section_heading' ) ) {
+						echo '<h2>';
+						the_field( 'right_section_heading' );
+						echo '</h2>';
+					}
+					if ( get_field( 'right_section_content' ) ) {
+						echo '<p>';
+						the_field( 'right_section_content' );
+						echo '</p>';
+					}
+				}
+				?>
+			</section>
+
             <!-- Need this for most sites -->
             <section class="home-blog"> 
 				<h2><?php esc_html_e( 'Recent News', 'rnb' ); ?></h2>
