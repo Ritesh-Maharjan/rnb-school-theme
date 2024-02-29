@@ -133,6 +133,6 @@ function register_taxonomies() {
         'rewrite'           => array( 'slug' => 'featured' ),
     );
 
-    register_taxonomy( 'fwd-service', array( 'rnb-students' ), $args );
+    register_taxonomy( 'rnb-staff', array( 'rnb-staff' ), $args );
 }
 add_action( 'init', 'register_taxonomies' );
