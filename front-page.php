@@ -31,11 +31,11 @@ get_header();
 
             <!-- Need this for most sites -->
             <section class="home-blog"> 
-				<h2><?php esc_html_e( 'Latest Blog Posts', 'fwd' ); ?></h2>
+				<h2><?php esc_html_e( 'Recent News', 'rnb' ); ?></h2>
 				<?php
 				$args = array(
 					'post_type' => 'post',
-					'posts_per_page' => 4
+					'posts_per_page' => 3
 				);
 				$blog_query = new WP_Query( $args );
 				if( $blog_query -> have_posts() ) {
@@ -45,9 +45,7 @@ get_header();
 						<article>
 							<h3>
 								<?php the_post_thumbnail('featured-image')?>
-								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								<br>
-								<?php echo get_the_date();?>
+								
 							</h3>
 						</article>
 						<?php
