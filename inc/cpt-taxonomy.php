@@ -130,7 +130,7 @@ function register_taxonomies() {
         'show_admin_column' => true,
         'show_in_rest'      => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'featured' ),
+        'rewrite'           => array( 'slug' => 'staff' ),
     );
 
     register_taxonomy( 'rnb-staff', array( 'rnb-staff' ), $args );
