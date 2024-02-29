@@ -78,7 +78,7 @@ get_header();
                                 
 							}
 							?>
-                            <a href="www.google.com">Instructor Website</a>
+                             <a href="https://www.google.com" target="_blank">Instructor Website</a>
 						</article>
 						<?php
 					}
