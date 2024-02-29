@@ -15,28 +15,7 @@
 get_header();
 ?>
 	<main id="primary" class="site-main">
-		<?php
-		$args = array(
-			'post_type' => 'rnb-staff',
-			'posts_per_page' => -1,
-			'orderby' => 'title',
-			'order' => 'asc',
-		);
-		$query = new WP_Query($args);
-		if ($query->have_posts()) {
-			while ($query->have_posts()) {
-				$query->the_post();
-				?>
-				<h3>
-					<a href="#<?php echo esc_attr(get_the_ID()); ?>">
-						<?php the_title(); ?>
-					</a>
-				</h3>
-				<?php
-			}
-			wp_reset_postdata();
-		}
-		?>
+		
     
 		<?php
 			$terms = get_terms( 
