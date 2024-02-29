@@ -75,11 +75,10 @@ get_header();
 								if (get_field('staff')) {
 									echo the_field('staff');
 								}
-                                if (get_field('url')) {
-									echo the_field('url');
-								}
+                                
 							}
 							?>
+                            <a href="www.google.com">Instructor Website</a>
 						</article>
 						<?php
 					}
