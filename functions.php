@@ -209,7 +209,6 @@ function register_custom_post_types(){
 		'menu_icon'          => 'dashicons-hammer',
 		'supports'           => array( 'title', 'editor' ),
 		'template'           => array( array( 'core/pullquote' ) ),
-		'template_lock'      => 'all'
 	  );
 	  register_post_type( 'rnb-students', $args );
 	  
