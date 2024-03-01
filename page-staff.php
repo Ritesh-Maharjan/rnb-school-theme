@@ -39,12 +39,12 @@ get_header();
 						),
 					);
 					$query = new WP_Query($args);
-					echo '<section class="work-section"><h2>' . esc_html__($term->name, 'rnb') . '</h2>';
+					echo '<section class=""><h2>' . esc_html__($term->name, 'rnb') . '</h2>';
 					// creating our services
 					while ($query->have_posts()) {
 						$query->the_post();
 						?>
-						<article id="<?php echo get_the_ID() ?>">
+						<article id="<?php echo get_the_ID(); ?>">
 							<h2>
 								<?php the_title(); ?>
 							</h2>
