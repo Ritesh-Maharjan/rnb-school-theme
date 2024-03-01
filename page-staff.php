@@ -44,6 +44,7 @@ get_header();
 					while ($query->have_posts()) {
 						$query->the_post();
 						?>
+                        
 						<article id="<?php echo get_the_ID(); ?>">
 							<h2>
 								<?php the_title(); ?>
@@ -57,10 +58,10 @@ get_header();
                                 if (get_field('courses')) {
 									echo the_field('courses');
 								}
-                                if (get_field('url')) {
-									echo the_field('url');
-								}
-                                
+                                $link = get_field('link');
+                                if( $link ): ?>
+                                    <a class="button" href="<?php echo esc_url( $link ); ?>">Instructor Website</a>
+                                <?php endif; 
 							}
 							?>
                             
