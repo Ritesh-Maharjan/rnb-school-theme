@@ -58,7 +58,7 @@ get_header();
                                 if (get_field('courses')) {
 									echo the_field('courses');
 								}
-                                $link = get_field('link');
+                                $link = get_field('url');
                                 if( $link ): ?>
                                     <a class="button" href="<?php echo esc_url( $link ); ?>">Instructor Website</a>
                                 <?php endif; 
