@@ -54,10 +54,16 @@ get_header();
 								if (get_field('staff')) {
 									echo the_field('staff');
 								}
+                                if (get_field('courses')) {
+									echo the_field('courses');
+								}
+                                if (get_field('url')) {
+									echo the_field('url');
+								}
                                 
 							}
 							?>
-                             <a href="https://www.google.com" target="_blank">Instructor Website</a>
+                            
 						</article>
 						<?php
 					}
