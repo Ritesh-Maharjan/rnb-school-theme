@@ -618,11 +618,37 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+/* Header
+--------------------------------------------- */
+.site-header {
+	background-color: black;
+	color: white;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0 2rem;
+}
+.site-header .header-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.site-header a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+.site-header .site-title {
+	font-weight: 700;
+}
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	width: 100%;
 }
 .main-navigation ul {
 	display: none;
@@ -663,7 +689,29 @@ textarea {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
+	border: none;
+	background-color: transparent;
 	display: block;
+	padding: 0;
+}
+.menu-toggle svg,
+.main-navigation.toggled ul svg {
+	fill: white;
+	cursor: pointer;
+}
+
+.main-navigation.toggled ul {
+	position: absolute;
+	top: 100%;
+	font-size: 1rem;
+	z-index: 100;
+	background: black;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.main-navigation.toggled ul a {
+	padding: 1rem;
 }
 
 @media screen and (min-width: 37.5em) {
