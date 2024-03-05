@@ -18,9 +18,15 @@ get_header();
 		
     
 		<?php
+		
+
+			get_template_part( 'template-parts/content', 'page' );
+			
+		
 			$terms = get_terms( 
 				array(
 					'taxonomy' => 'rnb-staff',
+					'hide_empty' => false,
 				) 
 			);
 			if ( $terms && ! is_wp_error( $terms ) ) {
@@ -40,6 +46,8 @@ get_header();
 					);
 					$query = new WP_Query($args);
 					echo '<section class=""><h2>' . esc_html__($term->name, 'rnb') . '</h2>';
+				
+					
 					// creating our services
 					while ($query->have_posts()) {
 						$query->the_post();
@@ -54,10 +62,13 @@ get_header();
 							if (function_exists('get_field')) {
 								if (get_field('staff')) {
 									echo the_field('staff');
+									echo '<br>';
 								}
                                 if (get_field('courses')) {
 									echo the_field('courses');
+									echo '<br>';
 								}
+								
                                 $link = get_field('url');
                                 if( $link ): ?>
                                     <a class="button" href="<?php echo esc_url( $link ); ?>">Instructor Website</a>
