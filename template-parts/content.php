@@ -8,8 +8,8 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<!-- class="" -->
+<article data-aos="fade-up" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
 		if (is_singular()):
@@ -39,7 +39,7 @@
 		} else {
 			the_excerpt();
 		}
-		
+
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__('Pages:', 'rnb-school-theme'),
