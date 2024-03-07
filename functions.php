@@ -188,3 +188,15 @@ require get_template_directory() . '/inc/cpt-taxonomy.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function rnb_excerpt_length( $length ) {
+	return 20;
+}
+
+add_filter('excerpt_length', 'rnb_excerpt_length', 999 );
+
+function rnb_excerpt_more($more) {
+	$more = '...<a href="'. esc_url(get_permalink() ) .'">Continue Reading</a>';
+	return $more;
+}
+add_filter( 'excerpt_more', 'rnb_excerpt_more' );
