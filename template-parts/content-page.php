@@ -18,7 +18,17 @@
         <?php
 		// the_content();
 		the_excerpt();
+
+		$terms = get_the_terms( get_the_ID(), 'students-specialty' );
+
 		
+
+        if ( $terms && ! is_wp_error( $terms ) ) {
+            foreach ( $terms as $term ) {
+                echo 'Speciality: <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>';
+            }
+            
+        }
 
 		wp_link_pages(
 			array(
