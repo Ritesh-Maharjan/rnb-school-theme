@@ -33,8 +33,8 @@ function register_custom_post_types(){
     'menu_icon' => 'dashicons-hammer',
     'supports' => array( 'title', 'editor', 'thumbnail' ),
     'template'           => array(
-        array( 'core/button' ),
         array( 'core/paragraph' ),
+        array( 'core/button' ),
     ),
     'template_lock' => 'all'
     );
