@@ -2,7 +2,7 @@
 function register_custom_post_types(){
     //register students
     $labels = array(
-    'name' => _x( 'Students', 'post type general name' ),
+    'name' => _x( 'The Class', 'post type general name' ),
     'singular_name' => _x( 'Student', 'post type singular name' ),
     'menu_name' => _x( 'Students', 'admin menu' ),
     'name_admin_bar' => _x( 'Specialty', 'add new on admin bar' ),
