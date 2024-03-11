@@ -19,11 +19,14 @@ get_header();
 
 	<article id="<?php echo get_the_ID(); ?>">
 		<h2>
-			<?php the_title(); ?>
+			<?php the_content(); ?>
 		</h2>
 		<?php
 		// ACF form validation
 		if (function_exists('get_field')) {
+			if (get_field('weekly')) {
+				echo get_field('weekly');
+			}
 			if (get_field('schedule')) {
 				$schedule_items = get_field('schedule');
 				?>
