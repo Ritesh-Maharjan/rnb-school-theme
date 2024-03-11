@@ -15,51 +15,56 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php
+	while (have_posts()):
+		the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+		get_template_part('template-parts/content', 'page');
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-            ?>
-
-            <!-- Need this for most sites -->
-            <section class="home-blog"> 
-				<h2><?php esc_html_e( 'Recent News', 'rnb' ); ?></h2>
-				<?php
-				$args = array(
-					'post_type' => 'post',
-					'posts_per_page' => 3
-				);
-				$blog_query = new WP_Query( $args );
-				if( $blog_query -> have_posts() ) {
-					while ( $blog_query -> have_posts()) {
-						$blog_query -> the_post();
-						?>
-						<article>
-							<h3>
-								<?php the_post_thumbnail('featured-image')?>
-								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-							</h3>
-						</article>
-						<?php
-					}
-					wp_reset_postdata();
-				}
-				?>
-			</section>
-
-            <?php
-		endwhile; // End of the loop.
+		// If comments are open or we have at least one comment, load up the comment template.
+		if (comments_open() || get_comments_number()):
+			comments_template();
+		endif;
 		?>
 
-	</main><!-- #main -->
+		<!-- Need this for most sites -->
+		<section class="home-blog">
+			<h2>
+				<?php esc_html_e('Recent News', 'rnb'); ?>
+			</h2>
+			<?php
+			$args = array(
+				'post_type' => 'post',
+				'posts_per_page' => 3
+			);
+			$blog_query = new WP_Query($args);
+			if ($blog_query->have_posts()) {
+				while ($blog_query->have_posts()) {
+					$blog_query->the_post();
+					?>
+					<article>
+						<h3>
+							<?php the_post_thumbnail('featured-image') ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</h3>
+					</article>
+					<?php
+				}
+				wp_reset_postdata();
+			}
+			?>
+			<a href="<?php echo home_url('/news'); ?>">See all news</a>
+		</section>
+
+		<?php
+	endwhile; // End of the loop.
+	?>
+
+</main><!-- #main -->
 
 <?php
 get_footer();

@@ -16,20 +16,8 @@
 
     <div class="entry-content">
         <?php
-		// the_content();
-		the_excerpt();
-
-		$terms = get_the_terms( get_the_ID(), 'students-specialty' );
-
-		
-
-        if ( $terms && ! is_wp_error( $terms ) ) {
-            foreach ( $terms as $term ) {
-                echo 'Speciality: <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>';
-            }
-            
-        }
-
+		the_content();
+	
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rnb-school-theme' ),
