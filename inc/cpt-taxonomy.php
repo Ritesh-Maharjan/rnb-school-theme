@@ -31,8 +31,12 @@ function register_custom_post_types(){
     'hierarchical' => false,
     'menu_position' => 7,
     'menu_icon' => 'dashicons-hammer',
-    'supports' => array( 'title', 'editor' ),
-    'template' => array( array( 'core/pullquote' ) ),
+    'supports' => array( 'title', 'editor', 'thumbnail' ),
+    'template'           => array(
+        array( 'core/button' ),
+        array( 'core/paragraph' ),
+    ),
+    'template_lock' => 'all'
     );
     register_post_type( 'rnb-students', $args );
 
