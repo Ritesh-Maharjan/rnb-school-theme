@@ -151,7 +151,7 @@ function rnb_school_theme_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
-	if (is_home() && !is_front_page()) {
+	if ( ( is_single() && get_post_type() === 'post' ) || ( is_home() && !is_front_page() ) ) {
 	wp_enqueue_style('rnb-aos-style', get_template_directory_uri() . '/css/aos.css', array(), '1.0.0');
 	wp_enqueue_script('rnb-aos-script', get_template_directory_uri() . '/js/aos.js', array(), '1.0.0', array('strategy'  => 'defer'));
 	wp_enqueue_script('rnb-script', get_template_directory_uri() . '/js/script.js', array('rnb-aos-script'), '1.0.0',array('strategy'  => 'defer'));
