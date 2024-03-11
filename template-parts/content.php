@@ -10,8 +10,8 @@
 ?>
 <!-- class="" -->
 <article data-aos="fade-up" data-aos-anchor-placement="top-center" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
+    <header class="entry-header">
+        <?php
 		if (is_singular()):
 			the_title('<h1 class="entry-title">', '</h1>');
 		else:
@@ -20,19 +20,19 @@
 
 		if ('post' === get_post_type()):
 			?>
-			<div class="entry-meta">
-				<?php
+        <div class="entry-meta">
+            <?php
 				rnb_school_theme_posted_on();
 				rnb_school_theme_posted_by();
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+    </header><!-- .entry-header -->
 
-	<?php rnb_school_theme_post_thumbnail(); ?>
+    <?php rnb_school_theme_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
+    <div class="entry-content">
+        <?php
 		// if its a single post then show every content
 		if (is_single()) {
 			the_content();
@@ -47,9 +47,9 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php rnb_school_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    <footer class="entry-footer">
+        <?php rnb_school_theme_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
