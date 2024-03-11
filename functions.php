@@ -190,13 +190,22 @@ if (defined('JETPACK__VERSION')) {
 }
 
 function rnb_excerpt_length( $length ) {
-	return 20;
+	 // Check if it's the specific page where you want custom settings
+	 if ( is_page( 'students' ) ) {
+        return 20; // Custom excerpt length for the specific page
+    } else {
+        return 55; // Default excerpt length for other pages
+    }
+	
 }
 
 add_filter('excerpt_length', 'rnb_excerpt_length', 999 );
 
 function rnb_excerpt_more($more) {
-	$more = '...<a href="'. esc_url(get_permalink() ) .'">Continue Reading</a>';
-	return $more;
+	if ( is_page( 'students' ) ) {
+        return '...<a href="' . esc_url( get_permalink() ) . '">Continue Reading</a>'; // Custom "Continue Reading" link
+    } else {
+        return '[...]'; // Default "Continue Reading" link for other pages
+    }
 }
 add_filter( 'excerpt_more', 'rnb_excerpt_more' );
