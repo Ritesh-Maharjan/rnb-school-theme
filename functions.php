@@ -211,3 +211,9 @@ function rnb_excerpt_more($more) {
     }
 }
 add_filter( 'excerpt_more', 'rnb_excerpt_more' );
+
+function my_theme_setup() {
+    add_theme_support( 'align-wide' ); // Add support for wide alignment
+    add_theme_support( 'alignfull' ); // Add support for full alignment
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
