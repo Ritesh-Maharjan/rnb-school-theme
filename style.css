@@ -897,11 +897,26 @@ textarea {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-.schedule-title {
-	text-align: center;
-	display: block;
+tr {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	align-items: flex-start;
+}
+tr:nth-child(odd) {
+	background-color: #eee;
 }
 
+@media screen and (min-width: 37.5em) {
+	tr {
+		flex-direction: row;
+	}
+	tr th, tr td {
+		width: 33.33%;
+		text-align: start;
+		padding: 2rem;
+	}
+}
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
