@@ -409,6 +409,11 @@ h6 {
 	clear: both;
 }
 
+h1 {
+	font-size: 2em;
+	font-weight: 500;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -468,10 +473,11 @@ body {
 }
 
 main {
-	padding-top: 5rem;
 	min-height: 100vh;
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 1rem;
+	padding-top: 5rem;
 }
 
 hr {
@@ -891,6 +897,26 @@ textarea {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
+tr {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	align-items: flex-start;
+}
+tr:nth-child(odd) {
+	background-color: #eee;
+}
+
+@media screen and (min-width: 37.5em) {
+	tr {
+		flex-direction: row;
+	}
+	tr th, tr td {
+		width: 33.33%;
+		text-align: start;
+		padding: 2rem;
+	}
+}
 .page-header {
 	width: 100%;
 }

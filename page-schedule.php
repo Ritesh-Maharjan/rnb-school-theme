@@ -24,18 +24,19 @@ get_header();
 		<?php
 		// ACF form validation
 		if (function_exists('get_field')) {
-			if (get_field('weekly')) {
-				echo get_field('weekly');
-			}
 			if (get_field('schedule')) {
 				$schedule_items = get_field('schedule');
 				?>
 
 				<table>
+					<?php
+					if (get_field('weekly')) {
+						echo "<caption >" . get_field('weekly') . "</caption>";
+					} ?>
 					<tr>
 						<th>Date</th>
 						<th>Course</th>
-						<th>instructor</th>
+						<th>Instructor</th>
 					</tr>
 
 					<?php
