@@ -41,6 +41,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
+# Pages
+	- Home
+	-Students
+	-Schedule
+	-Staff
+	-News
 # plugins
 	- Jetpack infinite scroll
 # Utilities
@@ -389,7 +395,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -874,6 +880,9 @@ textarea {
 	display: block;
 }
 
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

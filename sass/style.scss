@@ -42,6 +42,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
+# Pages
+	- Home
+	-Students
+	-Schedule
+	-Staff
+	-News
 # plugins
 	- Jetpack infinite scroll
 # Utilities
@@ -81,6 +87,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "components/components";
 
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/home";
+@import "pages/news";
+@import "pages/schedule";
+@import "pages/staff";
+@import "pages/students";
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

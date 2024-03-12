@@ -156,6 +156,8 @@ function rnb_school_theme_scripts()
 	wp_enqueue_script('rnb-aos-script', get_template_directory_uri() . '/js/aos.js', array(), '1.0.0', array('strategy'  => 'defer'));
 	wp_enqueue_script('rnb-script', get_template_directory_uri() . '/js/script.js', array('rnb-aos-script'), '1.0.0',array('strategy'  => 'defer'));
 	}
+	
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' );
 }
 add_action('wp_enqueue_scripts', 'rnb_school_theme_scripts');
 
