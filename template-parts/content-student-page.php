@@ -11,32 +11,38 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+    <a href="<?php the_permalink(); ?>">
+        <h2><?php the_title(); ?></h2>
+    </a>
+
 
     <?php rnb_school_theme_post_thumbnail(); ?>
 
     <div class="entry-content">
         <?php
-		// the_content();
-		the_excerpt();
 
-		$terms = get_the_terms( get_the_ID(), 'students-specialty' );
+        // the_content();
 
-		
+        the_excerpt();
+
+        $terms = get_the_terms( get_the_ID(), 'students-specialty' );
+
+
 
         if ( $terms && ! is_wp_error( $terms ) ) {
-            foreach ( $terms as $term ) {
-                echo 'Speciality: <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>';
-            }
-            
+        foreach ( $terms as $term ) {
+        echo 'Speciality: <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>';
         }
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rnb-school-theme' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+        }
+
+        wp_link_pages(
+        array(
+        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rnb-school-theme' ),
+            'after' => '</div>',
+        )
+        );
+        ?>
     </div><!-- .entry-content -->
 
     <?php if ( get_edit_post_link() ) : ?>
