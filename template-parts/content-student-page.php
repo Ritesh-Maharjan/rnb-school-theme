@@ -17,11 +17,10 @@
 
 
     <?php rnb_school_theme_post_thumbnail(); ?>
-
     <div class="entry-content">
         <?php
 
-        // the_content();
+
 
         the_excerpt();
 
