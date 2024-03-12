@@ -467,6 +467,11 @@ body {
 	background: #fff;
 }
 
+main {
+	padding-top: 5rem;
+	min-height: 100vh;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
