@@ -1,4 +1,40 @@
-body{
-    background-color: blue;
+
+.page-header{
+    width: 100%;
+
+}
+
+.site-main-students{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#students{
+    width: 300px;
+    a{
+        text-decoration: none;
+        color:$color__link;
+        font-weight: 700;
+    }
+    a:hover{
+        color: $color__link-hover;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .entry-content{
+
+        font-weight: 500;
+
+        a{
+            font-weight: 700;
+            color: $color__link;
+        }
+    }
+
+    
 }
 
