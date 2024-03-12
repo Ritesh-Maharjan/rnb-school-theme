@@ -25,7 +25,7 @@ get_header();
 		// ACF form validation
 		if (function_exists('get_field')) {
 			if (get_field('weekly')) {
-				echo get_field('weekly');
+				echo "<span class='schedule-title'>" . get_field('weekly') . "</span>";
 			}
 			if (get_field('schedule')) {
 				$schedule_items = get_field('schedule');
