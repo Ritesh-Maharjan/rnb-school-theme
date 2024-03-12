@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="students" <?php post_class(); ?>>
 
     <a href="<?php the_permalink(); ?>">
         <h2><?php the_title(); ?></h2>
