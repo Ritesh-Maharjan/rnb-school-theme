@@ -930,6 +930,39 @@ tr:nth-child(odd) {
 		padding: 2rem;
 	}
 }
+.page-header {
+	width: 100%;
+}
+
+.site-main-students {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+#students {
+	width: 300px;
+}
+#students a {
+	text-decoration: none;
+	color: #4169e1;
+	font-weight: 700;
+}
+#students a:hover {
+	color: #191970;
+}
+#students img {
+	width: 300px;
+	height: 300px;
+}
+#students .entry-content {
+	font-weight: 500;
+}
+#students .entry-content a {
+	font-weight: 700;
+	color: #4169e1;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
