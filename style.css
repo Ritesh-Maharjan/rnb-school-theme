@@ -538,7 +538,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #305c9f;
 }
 a:visited {
 	color: #800080;
@@ -910,26 +910,32 @@ textarea {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-tr {
+article a {
+	text-decoration: none;
+	font-weight: 700;
+}
+
+article tr {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
 	align-items: flex-start;
 }
-tr:nth-child(odd) {
+article tr:nth-child(odd) {
 	background-color: #eee;
 }
-
 @media screen and (min-width: 37.5em) {
-	tr {
+	article tr {
 		flex-direction: row;
 	}
-	tr th, tr td {
+	article tr th,
+	article tr td {
 		width: 33.33%;
 		text-align: start;
 		padding: 2rem;
 	}
 }
+
 .page-header {
 	width: 100%;
 }
@@ -945,7 +951,7 @@ tr:nth-child(odd) {
 }
 #students a {
 	text-decoration: none;
-	color: #4169e1;
+	color: #305c9f;
 	font-weight: 700;
 }
 #students a:hover {
@@ -960,7 +966,7 @@ tr:nth-child(odd) {
 }
 #students .entry-content a {
 	font-weight: 700;
-	color: #4169e1;
+	color: #305c9f;
 }
 
 /*--------------------------------------------------------------

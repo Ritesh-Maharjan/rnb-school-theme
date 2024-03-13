@@ -1,22 +1,25 @@
-tr {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  align-items: flex-start;
-
-  &:nth-child(odd) {
-    background-color: #eee;
-  }
-}
-
-@media screen and (min-width: 37.5em) {
+article {
   tr {
-    flex-direction: row;
-    
-    th,td {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: flex-start;
+
+    &:nth-child(odd) {
+      background-color: #eee;
+    }
+  }
+
+  @media screen and (min-width: 37.5em) {
+    tr {
+      flex-direction: row;
+
+      th,
+      td {
         width: 33.33%;
         text-align: start;
         padding: 2rem;
+      }
     }
   }
 }
