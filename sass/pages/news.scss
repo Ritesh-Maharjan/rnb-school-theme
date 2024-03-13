@@ -1,7 +1,38 @@
-article{
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
-    a {
-        text-decoration: none;
-        font-weight: 700;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .attachment-post-thumbnail {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  .entry-content {
+    margin: 0;
+  }
+
+  .entry-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 37.5em) {
+    .entry-footer {
+      gap: 3rem;
+      flex-direction: row;
     }
+  }
+}
+
+.post-navigation {
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
 }

@@ -1,8 +1,67 @@
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+  // Make sure select elements fit in widgets.
+  select {
+    max-width: 100%;
+  }
+}
+
+// my widge codes
+
+.widget-area {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .wp-block-search__inside-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .wp-block-search__input {
+      padding: 0.5rem;
+    }
+
+    .wp-block-search__button {
+      margin-left: 0;
+      background-color: #305c9f;
+      color: white;
+      padding: 1rem;
+    }
+  }
+
+  .wp-block-latest-posts {
+    list-style: square;
+  }
+
+  .wp-calendar-nav {
+    text-align: start;
+  }
+
+  .wp-block-categories {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .widget-area {
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+
+    .wp-block-heading {
+      margin: 0;
+    }
+    .widget-block {
+      flex-grow: 1;
+      border: 1px solid black;
+    }
+  }
 }
