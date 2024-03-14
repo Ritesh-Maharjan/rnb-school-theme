@@ -1,0 +1,58 @@
+.site-footer {
+  background-color: #333333;
+  color: white;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -2rem;
+  margin-top: 3rem;
+
+  .photo-container {
+    width: 200px;
+    align-self: center;
+  }
+
+  .site-info {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+    }
+  }
+
+  .footer-nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .site-footer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+
+    .photo-container {
+      grid-column: 2/3;
+    }
+
+    .site-info {
+      text-align: left;
+      grid-column: 4/6;
+    }
+
+    .footer-nav {
+      grid-column: 7/8;
+    }
+  }
+}

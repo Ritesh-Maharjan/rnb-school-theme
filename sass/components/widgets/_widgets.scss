@@ -36,6 +36,19 @@
       padding: 1rem;
     }
   }
+  .wp-block-calendar {
+	  
+	  th{
+		background-color: transparent;
+		border: none;
+		font-weight: 700;
+	  }
+
+
+	td{
+		border: none;
+	}
+  }
 
   .wp-block-latest-posts {
     list-style: square;

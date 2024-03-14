@@ -51,6 +51,7 @@ function rnb_school_theme_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'rnb-school-theme'),
+			'menu-2' => esc_html__('Secondary', 'rnb-school-theme'),
 		)
 	);
 

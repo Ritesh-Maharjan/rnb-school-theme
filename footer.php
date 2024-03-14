@@ -11,24 +11,39 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rnb-school-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rnb-school-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rnb-school-theme' ), 'rnb-school-theme', '<a href="http://riteshmaharjan.com/school">Ritesh, Nikko, Baagi</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+
+	<div class="photo-container">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/iconmonstr-school-16-240.png" alt="Image 1">
+	</div>
+	<div class="site-info">
+		<h2>Credits</h2>
+		<?php
+		/* translators: 1: Theme name, 2: Theme author. */
+		printf(esc_html__('Created by: %1$s %2$s.'), '', '<a href="http://riteshmaharjan.com/school">Ritesh, Nikko, Baagi</a>');
+		?>
+		<p>
+			Photo Courtesy of <a href="https://www.shopify.com/stock-photos" target="_blank">Burst.</a>
+		</p>
+	</div><!-- .site-info -->
+
+	<nav class="footer-nav">
+		<h2>Links</h2>
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'menu-2',
+				'menu_id' => 'secondary-menu',
+			)
+		);
+		?>
+	</nav>
+
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
