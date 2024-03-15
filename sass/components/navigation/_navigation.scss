@@ -7,49 +7,15 @@
     margin: 0;
     padding-left: 0;
 
-    ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999;
-
-      ul {
-        left: -999em;
-        top: 0;
-      }
-
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          display: block;
-          left: auto;
-        }
-      }
-
-      a {
-        width: 200px;
-      }
-
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
-    }
-
-    li:hover > ul,
-    li.focus > ul {
-      left: auto;
+    ul.sub-menu {
+      background-color: gray;
     }
   }
 
   li {
-    position: relative;
-
+    &:hover {
+      background-color: #305c9f;
+    }
     &:hover > a,
     &.focus > a {
     }
@@ -81,7 +47,8 @@
   }
 }
 
-.main-navigation.toggled ul {
+// using nth-child so that we are not targeting submenu ul
+.main-navigation.toggled ul:nth-child(1) {
   position: absolute;
   top: 100%;
   font-size: 1rem;
@@ -103,6 +70,47 @@
 
   .main-navigation ul {
     display: flex;
+    height: 100%;
+
+    li {
+      padding: 1rem 0.5rem;
+    }
+
+    ul {
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      li {
+        padding: 0.5rem;
+        background-color: black;
+        margin: 0;
+
+        &:hover ul {
+          display: block;
+        }
+
+        a {
+          width: 200px;
+        }
+      }
+    }
+
+    .menu-item-has-children {
+      position: relative;
+    }
+
+    /* Show submenus when their parent menu item is hovered */
+    .menu-item-has-children:hover > ul {
+      display: block;
+    }
+
+    /* Show submenus when their child elements are hovered */
+    .menu-item-has-children ul:hover {
+      display: block;
+    }
   }
 }
 
