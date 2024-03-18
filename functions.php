@@ -207,7 +207,7 @@ add_filter('enter_title_here', 'custom_post_type_title_placeholder', 10, 2);
 
 function rnb_excerpt_length( $length ) {
 	 // Check if it's the specific page where you want custom settings
-	 if ( is_page( 'students' ) ) {
+	 if ( !is_home() ) {
         return 20; // Custom excerpt length for the specific page
     } else {
         return 55; // Default excerpt length for other pages
@@ -218,8 +218,8 @@ function rnb_excerpt_length( $length ) {
 add_filter('excerpt_length', 'rnb_excerpt_length', 999 );
 
 function rnb_excerpt_more($more) {
-	if ( is_page( 'students' ) ) {
-        return '...<a href="' . esc_url( get_permalink() ) . '">Continue Reading</a>'; // Custom "Continue Reading" link
+	if ( !is_home() ) {
+        return '<br> <a href="' . esc_url( get_permalink() ) . '">Read more about the student...</a>'; // Custom "Continue Reading" link
     } else {
         return '[...]'; // Default "Continue Reading" link for other pages
     }
@@ -231,3 +231,11 @@ function my_theme_setup() {
     add_theme_support( 'alignfull' ); // Add support for full alignment
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
+
+
+function rnb_image_sizes() {
+	add_image_size('student-medium', 200, 300, true);
+
+}
+
+add_action('after_setup_theme', 'rnb_image_sizes');
