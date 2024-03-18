@@ -29,7 +29,7 @@
         <?php endif; ?>
     </header><!-- .entry-header -->
 
-    <?php rnb_school_theme_post_thumbnail(); ?>
+    <?php the_post_thumbnail('student-medium'); ?>
 
     <div class="entry-content">
         <?php

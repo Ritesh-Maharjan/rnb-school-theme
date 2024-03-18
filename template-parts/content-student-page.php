@@ -16,7 +16,7 @@
     </a>
 
 
-    <?php the_post_thumbnail('student-medium'); ?>
+    <?php the_post_thumbnail(); ?>
     <div class="entry-content">
         <?php
 
