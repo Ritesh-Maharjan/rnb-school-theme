@@ -12,32 +12,46 @@ get_header();
 
 <main id="primary" class="site-main-students">
 
-    <?php if ( have_posts() ) : ?>
+    <?php if (have_posts()): ?>
 
-    <header class="page-header">
-        <h1 class="page-title"><?php post_type_archive_title(); ?></h1>
-        <?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
-    </header><!-- .page-header -->
+        <header class="page-header">
+            <h1 class="page-title">
+                <?php post_type_archive_title(); ?>
+            </h1>
+            <?php the_archive_description('<div class="archive-description">', '</div>'); ?>
+        </header><!-- .page-header -->
 
-    <?php
-    /* Start the Loop */
-    while ( have_posts() ) :
-        the_post();
-    ?>
+        <?php
+        $args = array(
+            'post_type' => 'rnb-students', 
+            'posts_per_page' => -1, 
+            'orderby' => 'title', 
+            'order' => 'ASC', 
+        );
 
-    <?php
-        /*
-        * Include the Post-Type-specific template for the content.
-        * If you want to override this in a child theme, then include a file
-        * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-        */
-        get_template_part( 'template-parts/content-student-page', get_post_type() );
-    endwhile;
+        $query = new WP_Query($args);
 
-    the_posts_navigation();
+        if ($query->have_posts()):
+            while ($query->have_posts()):
+                $query->the_post();
 
-    else :
-        get_template_part( 'template-parts/content', 'none' );
+                ?>
+
+                <?php
+                /*
+                 * Include the Post-Type-specific template for the content.
+                 * If you want to override this in a child theme, then include a file
+                 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                 */
+                get_template_part('template-parts/content-student-page', get_post_type());
+            endwhile;
+
+        endif;
+
+        the_posts_navigation();
+
+    else:
+        get_template_part('template-parts/content', 'none');
     endif;
     ?>
 
