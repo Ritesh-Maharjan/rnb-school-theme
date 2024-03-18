@@ -192,6 +192,19 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Function to change the placeholder text for a specific custom post type
+function custom_post_type_title_placeholder($title_placeholder, $post) {
+    if ($post->post_type == 'rnb-staff') {
+        $title_placeholder = 'Add staff name';
+    }
+    if ($post->post_type == 'rnb-students') {
+        $title_placeholder = 'Add student name';
+    }
+    return $title_placeholder;
+}
+
+add_filter('enter_title_here', 'custom_post_type_title_placeholder', 10, 2);
+
 function rnb_excerpt_length( $length ) {
 	 // Check if it's the specific page where you want custom settings
 	 if ( is_page( 'students' ) ) {
