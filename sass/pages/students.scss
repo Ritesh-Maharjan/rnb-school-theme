@@ -213,9 +213,11 @@
         .entry-content{
             display: flex;
             flex-direction: column-reverse;
-            order: -1;
 
         .wp-block-button{
+
+            order: -1;
+
             a:hover{
                 color: white;
                 text-decoration: underline;
