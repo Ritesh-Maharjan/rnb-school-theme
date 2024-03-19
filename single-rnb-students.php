@@ -12,7 +12,7 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<?php
+    <?php
 	while (have_posts()):
 		the_post();
 
@@ -33,6 +33,7 @@ get_header();
 				$args = array(
 					'post_type' => 'rnb-students',
 					'posts_per_page' => -1,
+					'post__not_in' => array( $post_id ),
 					'tax_query' => array(
 						array(
 							'taxonomy' => 'students-specialty',
@@ -49,8 +50,8 @@ get_header();
 				while ($query->have_posts()) {
 					$query->the_post();
 					?>
-					<p> <a href="<?php the_permalink(); ?> "> <?php the_title() ?> </a> </p>
-					<?php
+    <p> <a href="<?php the_permalink(); ?> "> <?php the_title() ?> </a> </p>
+    <?php
 				}
 				wp_reset_postdata();
 				// Add your WP_Query() code here
