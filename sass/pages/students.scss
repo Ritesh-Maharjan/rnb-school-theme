@@ -43,6 +43,7 @@
     
 }
 //students designer page
+@media screen and (min-width: 768px) {
 .site-main-designer{
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +51,9 @@
 
     .entry-header{
         width: 100%;
+        a{
+            text-decoration: none;
+        }
         .entry-title{
             color: $color__link;
         }
@@ -92,6 +96,8 @@
         grid-column: 2/6;
         display: flex;
         flex-direction: column;
+        margin-left: 1.5rem;
+
         .wp-block-button{
             order: 2;
         }
@@ -102,9 +108,12 @@
 
 
 }
+}
 
 
 //students developer page
+@media screen and (min-width: 768px) {
+
 
 .site-main-developer{
     display: flex;
@@ -113,6 +122,9 @@
 
     .entry-header{
         width: 100%;
+        a{
+            text-decoration: none;
+        }
         .entry-title{
             color: $color__link;
         }
@@ -154,9 +166,42 @@
         grid-column: 2/6;
         display: flex;
         flex-direction: column;
+        margin-left: 1.5rem;
+
         .wp-block-button{
             order: 2;
         }
     }
+    }
+}
+}
+
+
+//single page
+
+  
+.single-rnb-students{
+
+
+    .post-thumbnail{
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 0;
+    width: 280px;
+    height: auto;
+    }
+    p{
+        a{
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+    @media screen and (min-width: 600px){
+
+        .entry-content{
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 }
