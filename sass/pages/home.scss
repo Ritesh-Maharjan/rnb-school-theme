@@ -1,0 +1,98 @@
+
+h2.wp-block-heading {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+div.wp-block-group__inner-container h2.wp-block-heading{
+    font-weight: 900;
+    text-align: center;
+    
+}
+.entry-content .wp-block-group  {
+    display: flex;
+    align-items: center;
+}
+
+.wp-container-core-group-layout-3.wp-container-core-group-layout-3 {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+section.home-blog a {
+    position: relative;
+    display: block;
+    margin: 0 auto 1em;
+    max-width: 300px;
+    color: #003c71;
+    text-decoration: none;
+    font-weight: 700;
+}
+section.home-blog h3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    font-size: 1em;
+    text-align: center;
+    background: rgba(255, 255, 255, .8);
+    color: #003c71;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+@media (max-width: 781px) {
+    .entry-content .wp-block-group {
+        flex-direction: column; 
+    }
+}
+
+@media (min-width: 782px) {
+    .entry-content .wp-block-group {
+        flex-direction: row; 
+    }
+}
+
+@media only screen and (min-width: 50em){
+    .home-blog {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+//recent news adjustments
+@media only screen and (min-width: 50em){
+    section.home-blog {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    section.home-blog a {
+        max-width: 300px;
+        position: relative;
+        font-weight: 700;
+        margin: 0 0.1px 1em;
+    }
+
+    section.home-blog h2 {
+        width: 100%;
+        font-size: 2rem;
+    }
+    section.home-blog p{
+        width: 100%;
+        
+    } 
+}
+
+
+
+ 
+
+

@@ -44,20 +44,20 @@ get_header();
 				while ($blog_query->have_posts()) {
 					$blog_query->the_post();
 					?>
-					<article>
-						<h3>
-							<?php the_post_thumbnail('featured-image') ?>
-							<a href="<?php the_permalink(); ?>">
-								<?php the_title(); ?>
-							</a>
-						</h3>
-					</article>
+					<a href="<?php the_permalink(); ?>">
+						
+						<?php the_post_thumbnail('featured-image') ?>
+						
+							<h3><?php the_title(); ?></h3>
+						</a>
+						
+					</a>
 					<?php
 				}
 				wp_reset_postdata();
 			}
 			?>
-			<a href="<?php echo home_url('/news'); ?>">See all news</a>
+			<p><a href="<?php echo home_url('/news'); ?>">See all news</a></p>
 		</section>
 
 		<?php
